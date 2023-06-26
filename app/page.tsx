@@ -40,15 +40,31 @@ const examples = [
 export default async function Index() {
   const supabase = createServerComponentClient({ cookies })
 
-  const {
+  let {
     data: { user },
   } = await supabase.auth.getUser()
+
+  let { data: companies, error}  = await supabase.from('companies').select('*');
+  let { data: cities, error2}  = await supabase.from('cities').select('*');
+
 
   return (
     <div className="flex-1 flex flex-col max-w-3xl mt-24">
       <h1 className="text-2xl mb-2 flex justify-between">
         <span className="sr-only">Supabase and Next.js Starter Template</span>
       </h1>
+
+      <ul>
+        {cities?.map((city) => (
+          <li className='text-white' key={city.id}>{city.name} ({city.abbreviation})</li>
+        ))}
+      </ul>
+      <hr />
+      <ul>
+        {companies?.map((comp) => (
+          <li className='text-white' key={comp.id}>{comp.name} {comp.website_url}</li>
+        ))}
+      </ul>
 
       <div className="flex border-b py-3 text-sm text-neutral-100">
         <span className="ml-auto">
