@@ -17,7 +17,7 @@ export default async function Index() {
 
 
   return (
-    <div className="flex-1 flex flex-col  mt-24 container w-100">
+    <div className="flex-1 flex flex-col mt-24">
       <Hero />
       <ul>
         {cities?.map((city) => (

@@ -25,9 +25,7 @@ export default async function RootLayout({
       <body>
         <main className="min-h-screen flex flex-col ">
           <Navigation user={user}/>
-          <div className="container">
-            {children}
-          </div>
+          {children}
         </main>
       </body>
     </html>
