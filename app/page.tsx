@@ -3,6 +3,7 @@ import { cookies } from 'next/headers'
 import Image from 'next/image'
 import Link from 'next/link'
 import LogoutButton from './logout-button'
+import Hero from './hero';
 
 export default async function Index() {
   const supabase = createServerComponentClient({ cookies })
@@ -16,7 +17,8 @@ export default async function Index() {
 
 
   return (
-    <div className="flex-1 flex flex-col max-w-3xl mt-24">
+    <div className="flex-1 flex flex-col  mt-24 container w-100">
+      <Hero />
       <ul>
         {cities?.map((city) => (
           <li className='' key={city.id}>{city.name} ({city.abbreviation})</li>
