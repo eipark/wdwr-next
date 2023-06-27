@@ -44,8 +44,8 @@ export default async function Index() {
     data: { user },
   } = await supabase.auth.getUser()
 
-  let { data: companies, error}  = await supabase.from('companies').select('*');
-  let { data: cities, error2}  = await supabase.from('cities').select('*');
+  let { data: companies }  = await supabase.from('companies').select('*');
+  let { data: cities  }  = await supabase.from('cities').select('*');
 
 
   return (
