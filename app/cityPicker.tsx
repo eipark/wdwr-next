@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function CityPicker({ cities }) {
   console.log(cities)
   return (
-    <div>
+    <div className="container">
       <h3>Select a city</h3>
       <ul>
       {cities?.map((city) => (

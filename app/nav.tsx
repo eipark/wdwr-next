@@ -16,7 +16,6 @@ function classNames(...classes) {
 }
 
 export default function Example({ user }) {
-  console.log('user', user);
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
