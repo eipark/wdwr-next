@@ -23,10 +23,11 @@ export default async function City(
   console.log('comp', companies);
 
   return (
-    <div className="flex-1 flex flex-col mt-24">
+    <div className="flex-1 flex flex-col mt-24 container">
       <Hero />
       <CityPicker cities={cities} />
-      <h3>{currentCity.name}</h3>
+
+      <h3 className="mt-8">Companies in {currentCity.name}</h3>
       <ul>
         {currentCompanies?.map((comp) => (
           <li className='' key={comp.id}>{comp.name} {comp.website_url}</li>
