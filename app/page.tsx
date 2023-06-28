@@ -3,7 +3,8 @@ import { cookies } from 'next/headers'
 import Image from 'next/image'
 import Link from 'next/link'
 import LogoutButton from './logout-button'
-import Hero from './hero';
+import Hero from './hero'
+import CityPicker from './cityPicker'
 
 export default async function Index() {
   const supabase = createServerComponentClient({ cookies })
@@ -18,19 +19,8 @@ export default async function Index() {
   return (
     <div className="flex-1 flex flex-col mt-24">
       <Hero />
+      <CityPicker cities={cities} />
       <div className="container">
-        <h3>Select your city</h3>
-        <ul>
-          {cities?.map((city) => (
-            <li className='' key={city.id}>{city.name} ({city.abbreviation})</li>
-          ))}
-        </ul>
-        <hr />
-        <ul>
-          {companies?.map((comp) => (
-            <li className='' key={comp.id}>{comp.name} {comp.website_url}</li>
-          ))}
-        </ul>
 
         <div className="flex border-b py-3 text-sm">
           <span className="ml-auto">
