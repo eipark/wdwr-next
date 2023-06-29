@@ -3,6 +3,14 @@ import { cookies } from 'next/headers'
 import CityPicker from '../../cityPicker'
 import Hero from '../../hero'
 
+//export async function generateStaticParams() {
+//  const supabase = createServerComponentClient({ cookies })
+//  let { data: cities }  = await supabase.from('cities').select('*');
+//  return cities?.map(({id}) => ({
+//    id,
+//  }));
+//}
+
 export default async function City(
   { params } :
   { params: { city : string}}) {
@@ -17,10 +25,6 @@ export default async function City(
   const currentCompanies = companies.filter((comp) =>
     comp.primary_city_id == currentCity.id
   );
-
-  console.log('curr comp', currentCompanies);
-  console.log('current city', currentCity);
-  console.log('comp', companies);
 
   return (
     <div className="flex-1 flex flex-col mt-24 container">
