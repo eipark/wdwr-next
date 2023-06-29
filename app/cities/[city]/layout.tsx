@@ -1,4 +1,3 @@
-
 export default function CitiesLayout({
   children,
 }: {
@@ -8,7 +7,6 @@ export default function CitiesLayout({
 
   return (
     <section>
-      Cities
       {children}
     </section>
   )
