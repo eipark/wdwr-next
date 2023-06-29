@@ -35,6 +35,7 @@ export default function Example({ user }) {
 
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start lg:justify-between">
                 <Link href="/"><h3 className="text-white">WDWR</h3></Link>
+                {/*
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="block h-8 w-auto lg:hidden"
@@ -47,6 +48,7 @@ export default function Example({ user }) {
                     alt="Your Company"
                   />
                 </div>
+                */}
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
