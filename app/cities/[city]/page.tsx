@@ -31,7 +31,10 @@ export default async function City(
       <Hero />
       <CityPicker cities={cities} />
 
-      <h3 className="mt-8">Companies in {currentCity.name}</h3>
+      <h3 className="mt-8">In-person companies in {currentCity.name}</h3>
+      <div className="featured">
+        Featured company:
+      </div>
       <ul>
         {currentCompanies?.map((comp) => (
           <li className='' key={comp.id}>{comp.name} {comp.website_url}</li>
