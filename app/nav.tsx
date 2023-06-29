@@ -7,16 +7,16 @@ import Link from 'next/link'
 
 const navigation = [
   { name: 'Employers', href: '/employers', current: true },
-  { name: 'About', href: '/About', current: false },
+  { name: 'About', href: '/about', current: false },
 ]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example({ user }) {
+export default function Nav({ user }) {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-gray-800 mb-10">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
