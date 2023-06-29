@@ -6,10 +6,12 @@ export default function CityPicker({ cities }) {
     <div className="container sm:columns-1 md:columns-3 text-white">
       <ul>
       {cities?.map((city) => (
-        <div key={city.id} className="w-full gap-8 mb-5 p-3 bg-black border-solid border-zinc-200 border-2">
-          <Link href={`/cities/${city.abbreviation.toLowerCase()}`}>{city.name}
-          </Link>
-        </div>
+        <Link href={`/cities/${city.abbreviation.toLowerCase()}`}>
+          <div key={city.id}
+          className="w-full gap-8 mb-5 p-8 bg-black border-solid text-center border-zinc-200 border-2 rounded-xl">
+            {city.name}
+          </div>
+        </Link>
       ))}
       </ul>
     </div>

@@ -71,8 +71,10 @@ export default function Nav({ user }) {
                 </div>
               </div>
 
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              
                 {/* Profile dropdown */}
+              {/*
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 {user ? (
                   <Menu as="div" className="relative ml-3">
                     <div>
@@ -137,6 +139,7 @@ export default function Nav({ user }) {
                   <p>nouser</p>
                 )}
               </div>
+              */}
             </div>
           </div>
 

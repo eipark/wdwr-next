@@ -22,6 +22,7 @@ export default async function Index() {
       <CityPicker cities={cities} />
       <div className="container">
 
+        {/* hey "user" stuff"
         <div className="flex border-b py-3 text-sm">
           <span className="ml-auto">
             {user ? (
@@ -36,6 +37,8 @@ export default async function Index() {
             )}
           </span>
         </div>
+        */}
+
       </div>
 
     </div>
